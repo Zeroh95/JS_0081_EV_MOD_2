@@ -10,7 +10,153 @@
     <script src="./assets/JS/script.js" defer></script>
     <title>Consejos de Seguridad</title>
 </head>
-<body>
+<body class="bg-dark text-light">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-body px-5" data-bs-theme="dark">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1 fw-bold">Cyber Secure</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="amenazas.html">Amenazas 
+                    Comunes</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link active" aria-current="page" href="consejos.html">Consejos 
+                    de Seguridad</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
     
+    <section id="consejos-seguridad" class="py-5">
+        <div class="container py-5">
+            <h2 class="text-center text-light fw-bold mb-4">Buenas Prácticas para Protegerte en Línea</h2>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-dark text-light">
+                    <i class="bi bi-shield-lock-fill me-2 text-primary"></i>
+                    Usa <strong>contraseñas fuertes y únicas</strong> en cada cuenta.
+                </li>
+                <li class="list-group-item bg-dark text-light">
+                    <i class="bi bi-phone-lock me-2 text-success"></i>
+                    Activa la <strong>verificación en dos pasos</strong> (2FA).
+                </li>
+                <li class="list-group-item bg-dark text-light">
+                    <i class="bi bi-arrow-repeat me-2 text-warning"></i>
+                    <strong>Actualiza</strong> tus sistemas y apps regularmente.
+                </li>
+                <li class="list-group-item bg-dark text-light">
+                    <i class="bi bi-wifi-off me-2 text-danger"></i>
+                    Evita usar <strong>Wi-Fi públicas sin protección</strong>.
+                </li>
+                <li class="list-group-item bg-dark text-light">
+                    <i class="bi bi-envelope-exclamation me-2 text-info"></i>
+                    No hagas clic en <strong>enlaces sospechosos o correos falsos</strong>.
+                </li>
+                <li class="list-group-item bg-dark text-light">
+                    <i class="bi bi-cloud-arrow-down-fill me-2 text-secondary"></i>
+                    Haz <strong>copias de seguridad</strong> de tus archivos importantes.
+                </li>
+                <li class="list-group-item bg-dark text-light">
+                    <i class="bi bi-eye-fill me-2 text-light"></i>
+                    <strong>Piensa antes de compartir</strong> información personal en redes.
+                </li>
+                <i class="bi bi-eye-fill me-2 text-light"></i>
+            </ul>
+            </div>
+    </section>
+
+    <section id="form-consejos" class="pb-5">
+        <div class="container py-5">
+        <h2 class="text-center text-light mb-4">Solicita Más Información</h2>
+
+        <form id="formularioContacto" class="p-4 rounded">
+            <div class="mb-3">
+                <label for="nombre" class="form-label text-light">Nombre completo</label>
+                <input type="text" class="form-control dark-input" id="nombre" required>
+                <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label text-light">Correo electrónico</label>
+                <input type="email" class="form-control dark-input" id="email" required>
+                <div class="invalid-feedback">Ingresa un correo válido.</div>
+            </div>
+            <button type="submit" class="btn btn-success">Enviar</button>
+            <div id="resultado" class="mt-3"></div>
+        </form>
+        </div>
+    </section>
+
+    <section id="modal" class="pb-5">
+        <h2 class="text-center text-light fw-bold mb-4">Test de Seguridad</h2>
+        <div class="container py-4 text-center">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" 
+            data-bs-target="#testSeguridadModal">Realizar Test de Seguridad
+            </button>
+        </div>
+
+
+        <div class="modal fade" id="testSeguridadModal" tabindex="-1" aria-labelledby="testSeguridadLabel" 
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light">
+            <div class="modal-header">
+                <h5 class="modal-title" id="testSeguridadLabel">Test Básico de Seguridad</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" 
+                aria-label="Cerrar"></button>
+            </div>
+            <form id="formTestSeguridad">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">1. ¿Usas contraseñas diferentes para cada cuenta?</label>
+                        <select class="form-select" id="q1" required>
+                            <option value="" selected disabled>Selecciona una opción</option>
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">2. ¿Activaste la verificación en dos pasos (2FA) en tus 
+                            cuentas importantes?</label>
+                        <select class="form-select" id="q2" required>
+                            <option value="" selected disabled>Selecciona una opción</option>
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">3. ¿Evitas conectarte a redes Wi-Fi públicas sin 
+                            protección?</label>
+                        <select class="form-select" id="q3" required>
+                            <option value="" selected disabled>Selecciona una opción</option>
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                    <div id="feedback" class="mt-3"></div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Enviar respuestas</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        </div>
+    </section>
 </body>
 </html>
